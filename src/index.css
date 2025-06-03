@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 50 50% 98%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 207 89% 42%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 84% 4%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 43 74% 66%;
+    --accent-foreground: 222 84% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 207 89% 42%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 207 89% 54%;
+    --primary-foreground: 222 84% 4%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 11% 65%;
+
+    --accent: 43 74% 66%;
+    --accent-foreground: 222 84% 4%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 207 89% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .luxury-gradient {
+    @apply bg-gradient-to-br from-ivory-100 via-gold-50 to-coral-50;
+  }
+  
+  .ocean-gradient {
+    @apply bg-gradient-to-br from-navy-400 via-navy-500 to-navy-600;
+  }
+  
+  .sunset-gradient {
+    @apply bg-gradient-to-br from-coral-400 via-gold-400 to-coral-500;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 border border-white/30 shadow-lg;
+  }
+  
+  .dark .glass-effect {
+    @apply bg-navy-900/80 border-navy-700/30;
+  }
+
+  .luxury-card {
+    @apply bg-white/95 dark:bg-navy-900/95 backdrop-blur-sm border border-ivory-200 dark:border-navy-700 shadow-xl rounded-2xl;
+  }
+
+  .tab-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
