@@ -27,6 +27,7 @@ Install my-project with npm
   npm run dev
  ```
 ##  💗Created by Celia Lopez de Maria💗
+📄 [PORTFOLIO](https://github.com/Celiusky13/SOLYMAR/raw/main/SOLYMAR.pdf)
 
 
 
